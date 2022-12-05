@@ -134,3 +134,31 @@ img:hover {
     transform: rotate(1800deg);
   }
 }
+.nav {
+  display: grid;
+  place-content: center;
+
+  margin: 1.5rem auto;
+  background-color: pink;
+  border-radius: 5px;
+  padding: 0.9rem 1.5rem;
+  height: 80px;
+  width: 90%;
+}
+.nav select,
+input {
+  border: none;
+  font-size: 18px;
+  padding: 0.3rem;
+  cursor: pointer;
+}
+.nav input,
+select {
+  width: 18ch;
+}
+.nav input:hover,
+select:hover {
+  background-color: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.682);
+  text-transform: uppercase;
+}

@@ -2,51 +2,53 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Merienda+One&family=Rampart+One&display=swap" rel="stylesheet" />
+ <meta charset="UTF-8" />
+ <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+ <link rel="preconnect" href="https://fonts.googleapis.com" />
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+ <link href="https://fonts.googleapis.com/css2?family=Merienda+One&family=Rampart+One&display=swap" rel="stylesheet" />
 
-  <link rel="stylesheet" href="style.css" />
-  <script defer src="app.js"></script>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Fetcher</title>
+ <link rel="stylesheet" href="style.css" />
+ <script defer src="app.js"></script>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <title>Fetcher</title>
 </head>
 
 <body>
-  <main>
-    <header>
-      <h1>The Rick & Morty APP</h1>
-      <h3>By profe Marce with Vanilla JS</h3>
-    </header>
-    <div class="filter">
-      <select name="status" id="status">
-        <option value="alive">Alive</option>
-        <option value="alive">Dead</option>
-        <option value="alive">Unknown</option>
-      </select>
-      <select name="gender" id="gender">
-        <option value="female">Female</option>
-        <option value="male">Male</option>
-        <option value="genderless">Genderless</option>
-        <option value="unknown">Unknown</option>
+ <main>
+  <header>
+   <h1>The Rick & Morty APP</h1>
+   <h3>By profe Marce with Vanilla JS</h3>
+   <nav id="nav" class="nav hidden">
+    <form id="filter-form">
+     <select name="status" id="status">
+      <option disabled selected>Pick a Status</option>
+      <option value="alive">Alive</option>
+      <option value="dead">Dead</option>
+      <option value="unknown">Unknown</option>
+     </select>
+     <select name="gender" id="gender">
+      <option disabled selected>Pick a Gender</option>
+      <option value="female">Female</option>
+      <option value="male">Male</option>
+      <option value="genderless">Genderless</option>
+      <option value="unknown">Unknown</option>
+     </select>
+     <input type="submit" value="Search">
+     <input type="reset" value="Reset">
+    </form>
+   </nav>
+  </header>
+  <button id="get">Get Data</button>
 
+  <div class="lds-hourglass hidden"></div>
 
-      </select>
-
-      <p>Query:</p>
-    </div>
-    <button id="get">Get Data</button>
-
-    <div class="lds-hourglass hidden"></div>
-
-    <section id="card-container"></section>
-    <div class="paginator hidden">
-      <button id="prev" disabled>prev</button>
-      <button id="next">next</button>
-    </div>
-  </main>
+  <section id="card-container"></section>
+  <div class="paginator hidden">
+   <button id="prev" disabled>prev</button>
+   <button id="next">next</button>
+  </div>
+ </main>
 </body>
 
 </html>
